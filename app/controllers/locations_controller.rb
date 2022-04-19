@@ -10,4 +10,9 @@ class LocationsController < ApplicationController
     location.save
   end
 
+  def show
+    results = Geocoder.search("Paris")
+    render json: results.first.coordinates
+  end
+
 end
