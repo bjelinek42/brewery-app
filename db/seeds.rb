@@ -12,7 +12,7 @@ csv_text = File.read(Rails.root.join('lib', 'seeds', 'breweries_us.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   b = Brewery.new
-  b.brewery_name = row['name']
+  b.name = row['name']
   b.address = row['address']
   b.save
 
