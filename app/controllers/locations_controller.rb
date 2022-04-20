@@ -11,7 +11,8 @@ class LocationsController < ApplicationController
   end
 
   def show
-    results = Geocoder.search("Paris")
+    
+    results = Geocoder.search("1920 Shattuck Ave, Berkeley, California, 94704")
     render json: results.first.coordinates
   end
 
