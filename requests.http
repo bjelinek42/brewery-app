@@ -3,4 +3,16 @@
 POST http://localhost:3000/locations
 
 ###
-GET http://localhost:3000/locations/:id
+GET http://localhost:3000/locations/2
+
+
+###
+GET http://localhost:3000/breweries
+
+
+###
+GET http://localhost:3000/breweries/1/address
+
+
+###
+GET http://localhost:3000/breweries/2/lat

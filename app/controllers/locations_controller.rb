@@ -11,8 +11,14 @@ class LocationsController < ApplicationController
   end
 
   def show
+
     
     results = Geocoder.search("1920 Shattuck Ave, Berkeley, California, 94704")
+
+    b = Brewery.find_by(id: params[:id])
+
+    results = Geocoder.search(b.address)
+
     render json: results.first.coordinates
   end
 
